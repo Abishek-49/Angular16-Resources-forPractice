@@ -1,0 +1,21 @@
+<div class="ekart--product--container">
+<img [src]="product.pImage" alt="">
+<p>Name : {{product.name}}</p>
+<p>Price : {{ '$' + product.price}}</p>
+<p>Color : {{product.color}}</p>
+<p>Discounted Price : {{getDiscountedPrice().toFixed(2)}}</p>
+<p>{{product.inStock>0?'only ' + product.inStock + ' left':'Not In Stock'}}</p>
+<button [disabled]="!(product.inStock > 0)">Buy Now</button>
+
+<!------------- Event Bindings With Examples --------------->
+
+<!-- <input [value]="name" (input)="onNameChange()"> 
+<p>Name : {{name}}</p> -->
+<!-- <input [value]="name" (input)="onNameChange($event)"> 
+<p>Name : {{name}}</p> -->
+
+<!-- <button [disabled]="this.addToCart===0" (click)="decrementCartValue()">-</button>
+<span>{{addToCart}}</span>
+<button [disabled]="this.addToCart===product.inStock" (click)="incrementCartValue()">+</button> -->
+
+</div>
