@@ -1,0 +1,9 @@
+<div class="ekart--search--product">
+    <input class="ekart-search-product-input" [(ngModel)]="searchText">
+     <!-- *ngClass directives starts here -->
+    <button [ngClass]="{'btn' : true,' btn-search' : searchText, 'btn-search-disabled':!searchText}" [disabled]="!searchText">Search</button>
+     <!-- *ngClass directives ends here -->
+</div>
+ <!-- *ngIf directives starts here -->
+<div class="ekart-search-result-for" *ngIf="searchText !='' "><p><strong>Search result for:</strong> {{ searchText }}</p></div>
+ <!-- *ngIf directives ends here -->
