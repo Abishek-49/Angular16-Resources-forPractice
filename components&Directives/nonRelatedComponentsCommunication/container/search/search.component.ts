@@ -16,9 +16,8 @@ export class SearchComponent {
     this.searchTextChanged.emit(this.searchText)
   }
 
-  updateSearchText(inputEl:HTMLInputElement){
-    this.searchText=inputEl.value
-    this.searchTextChanged.emit(this.searchText)
-    }
+   updateSearchText(event:any){
+    this.searchText=event.target.value
+  }
     // Non related components ends here
 }
