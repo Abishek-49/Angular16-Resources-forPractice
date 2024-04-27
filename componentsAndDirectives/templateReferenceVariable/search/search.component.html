@@ -1,0 +1,11 @@
+<div class="ekart--search--product">
+     <!-- Template Reference variable starts here  --> 
+    <input class="ekart-search-product-input" #searchInput >
+ 
+    <button class="btn btn-search" (click)="updateSearchText(searchInput)">Search</button>
+      <!-- Template Reference variable ends here  --> 
+</div>
+
+<div class="ekart-search-result-for" *ngIf="searchText !='' ">
+     <p><strong>Search result for:</strong> {{ searchText }}</p>
+</div>
